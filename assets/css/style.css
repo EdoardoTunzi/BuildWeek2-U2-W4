@@ -1,0 +1,11 @@
+#sideBar {
+  background-color: #000000;
+}
+
+.volumSlider {
+  width: 100px;
+}
+
+.volumSlider::-webkit-slider-thumb {
+  appearance: none;
+}
