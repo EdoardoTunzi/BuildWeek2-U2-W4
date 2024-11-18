@@ -1,6 +1,15 @@
+body {
+  font-family: "Circular";
+}
+
 /*------------------------side bar------------------------------*/
 #sideBar {
   background-color: #000000;
+  height: calc(100vh - 101px);
+}
+
+#scrollable {
+  max-height: calc(100vh - 342px);
 }
 /*-----------------------main section---------------------------*/
 
