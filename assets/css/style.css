@@ -1,11 +1,24 @@
+/*------------------------side bar------------------------------*/
 #sideBar {
   background-color: #000000;
 }
+/*-----------------------main section---------------------------*/
 
-.volumSlider {
-  width: 100px;
+/*----------------------- player bar----------------------------*/
+input[type="range"] {
+  /* Stile del range (linea di scorrimento) */
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  outline: none;
 }
 
-.volumSlider::-webkit-slider-thumb {
-  appearance: none;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Rimuove lo stile predefinito */
+  height: 0; /* Rende il thumb invisibile */
+  width: 0;
+  background: transparent;
+  border: none;
 }
