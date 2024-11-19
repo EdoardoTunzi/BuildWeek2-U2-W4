@@ -24,7 +24,7 @@ body {
 
 /* Colore del track della scrollbar */
 ::-webkit-scrollbar-track {
-  background: black; /* Colore di sfondo */
+  background: transparent; /* Colore di sfondo */
   /* Angoli arrotondati */
 }
 
@@ -39,14 +39,14 @@ body {
 /*----------------------- player bar----------------------------*/
 /*da verificare e modificare*/
 .progress {
-  background-color: #dce0e4; /* Rimuove il colore di sfondo */
+  background-color: #4d4d4d; /* Rimuove il colore di sfondo */
   /* Rimuove eventuali bordi */
   height: 4px; /* Imposta un'altezza personalizzata */
   /* Elimina il padding */
 }
 
 .progress-bar {
-  background-color: #1cd760;
+  background-color: #dce0e4;
   height: 4px; /* Rimuove il colore della barra */
 }
 
