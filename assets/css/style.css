@@ -14,6 +14,19 @@ body {
 /*-----------------------main section---------------------------*/
 
 /*----------------------- player bar----------------------------*/
+/*da verificare e modificare*/
+.progress {
+  background-color: #dce0e4; /* Rimuove il colore di sfondo */
+  /* Rimuove eventuali bordi */
+  height: 4px; /* Imposta un'altezza personalizzata */
+  /* Elimina il padding */
+}
+
+.progress-bar {
+  background-color: #1cd760;
+  height: 4px; /* Rimuove il colore della barra */
+}
+
 input[type="range"] {
   /* Stile del range (linea di scorrimento) */
   -webkit-appearance: none;
