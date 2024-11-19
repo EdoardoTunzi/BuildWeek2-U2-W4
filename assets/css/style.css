@@ -59,6 +59,35 @@ form input {
   font-size: 13px;
 }
 
+#first-section {
+  background: linear-gradient(
+    187deg,
+    #000 0%,
+    #000 0%,
+    #212529 0%,
+    #000 70%,
+    #000 100%
+  );
+}
+
+.btn-custom {
+  border: 1px solid white;
+}
+
+.fs-7 {
+  font-size: 15px;
+}
+
+.fs-8 {
+  font-size: 10px;
+}
+.letter-spacing {
+  letter-spacing: 2px;
+}
+.spotify-color {
+  background-color: #1cd760;
+}
+
 /*----------------------- player bar----------------------------*/
 /*da verificare e modificare*/
 .progress {
