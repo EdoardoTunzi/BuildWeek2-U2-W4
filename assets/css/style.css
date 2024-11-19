@@ -6,11 +6,34 @@ body {
 #sideBar {
   background-color: #000000;
   height: calc(100vh - 101px);
+  color: #b2b2b2;
 }
 
 #scrollable {
   max-height: calc(100vh - 342px);
+  color: #9f9f9f;
+  font-weight: 400;
+  font-size: 13px;
 }
+
+/*scrollbar styling*/
+/* Stile base della scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Larghezza della scrollbar */
+}
+
+/* Colore del track della scrollbar */
+::-webkit-scrollbar-track {
+  background: black; /* Colore di sfondo */
+  /* Angoli arrotondati */
+}
+
+/* Colore e stile della thumb */
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d; /* Colore della thumb */
+  border-radius: none; /* Angoli arrotondati */
+}
+
 /*-----------------------main section---------------------------*/
 
 /*----------------------- player bar----------------------------*/
