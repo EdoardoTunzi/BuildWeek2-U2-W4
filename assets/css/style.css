@@ -36,6 +36,29 @@ body {
 
 /*-----------------------main section---------------------------*/
 
+.btnChevron {
+  background-color: #131313;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+}
+form {
+  background-color: #131313;
+  padding-inline: 15px;
+  border-radius: 2rem;
+}
+
+form button,
+form input {
+  background: transparent;
+  border: none;
+}
+#dropdownProfile {
+  background-color: #131313;
+  border: none;
+  font-size: 13px;
+}
+
 /*----------------------- player bar----------------------------*/
 /*da verificare e modificare*/
 .progress {

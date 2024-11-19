@@ -105,7 +105,37 @@
           </div>
           <!--MAIN-->
           <div class="col-9">
-            <div>content</div>
+            <div>
+              <div class="d-flex justify-content-between align-items-center">
+                <!--chevrons-->
+                <div>
+                  <button class="btnChevron"><i class="bi bi-chevron-left"></i></button>
+                  <button class="btnChevron"><i class="bi bi-chevron-right"></i></button>
+                </div>
+                <form class="d-flex" action="">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                  <input type="text" placeholder="Cerca" />
+                </form>
+                <!--dropdown profile-->
+                <div class="dropdown d-flex">
+                  <button
+                    id="dropdownProfile"
+                    class="btn btn-secondary dropdown-toggle d-flex rounded-pill align-items-center p-0 pe-2"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img class="rounded-circle me-2" src="./assets/imgs/main/image-12.jpg" alt="profile img" width="30" />
+                    Lidia Natilus...
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
