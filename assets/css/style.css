@@ -90,13 +90,4 @@ input[type="range"]::-webkit-slider-thumb {
   background: transparent;
   border: none;
 }
-.testo-sopra-immagine{
-  position: absolute;
-  bottom: 0px;
-  left: 40px;
 
-}
-#imgbg{
-  width: 100%;
-  height: 500px;
-}
