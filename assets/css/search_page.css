@@ -1,0 +1,107 @@
+body {
+  font-family: "Circular";
+}
+
+.col-9 {
+  height: calc(100vh - 101px);
+}
+
+/*------------------------side bar------------------------------*/
+#sideBar {
+  background-color: #000000;
+  height: calc(100vh - 101px);
+  color: #b2b2b2;
+}
+
+#scrollable {
+  max-height: calc(100vh - 342px);
+  color: #9f9f9f;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+/*scrollbar styling*/
+/* Stile base della scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Larghezza della scrollbar */
+}
+
+/* Colore del track della scrollbar */
+::-webkit-scrollbar-track {
+  background: transparent; /* Colore di sfondo */
+  /* Angoli arrotondati */
+}
+
+/* Colore e stile della thumb */
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d; /* Colore della thumb */
+  border-radius: none; /* Angoli arrotondati */
+}
+
+/*-----------------------main section---------------------------*/
+
+.btnChevron {
+  background-color: #131313;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+}
+form {
+  background-color: #131313;
+  padding-inline: 15px;
+  border-radius: 2rem;
+}
+
+form button,
+form input {
+  background: transparent;
+  border: none;
+}
+#dropdownProfile {
+  background-color: #131313;
+  border: none;
+  font-size: 13px;
+}
+.search-card {
+  overflow: hidden;
+  position: relative;
+}
+.search-image {
+  border-radius: 4px;
+  width: 50%;
+  right: 0;
+  bottom: -10px;
+  position: absolute;
+  transform: rotate(25deg) translate(18%, -2%);
+}
+/*----------------------- player bar----------------------------*/
+/*da verificare e modificare*/
+.progress {
+  background-color: #4d4d4d; /* Rimuove il colore di sfondo */
+  /* Rimuove eventuali bordi */
+  height: 4px; /* Imposta un'altezza personalizzata */
+  /* Elimina il padding */
+}
+
+.progress-bar {
+  background-color: #dce0e4;
+  height: 4px; /* Rimuove il colore della barra */
+}
+
+input[type="range"] {
+  /* Stile del range (linea di scorrimento) */
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Rimuove lo stile predefinito */
+  height: 0; /* Rende il thumb invisibile */
+  width: 0;
+  background: transparent;
+  border: none;
+}
