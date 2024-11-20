@@ -43,19 +43,20 @@ const getAlbumInfo = function () {
       const profileImg = document.getElementById("responsiveProfileImg");
       profileImg.innerHTML = `<img
                     id="img-shadow"
+                    crossorigin ="anonymous"
                     src="${responseObj.cover}"
                     
                     alt=""
                     height="250px"
                     
                   />`;
-      // const image = document.getElementById("img-shadow");
-      // image.onload = function () {
-      //   const colorThief = new ColorThief();
-      //   const dominantColor = colorThief.getColor(image);
-      //   const navbar = document.getElementById("navbar");
-      //   navbar.style.backgroundColor = "rgb(" + dominantColor + ")";
-      // };
+      const image = document.getElementById("img-shadow");
+      image.onload = function () {
+        const colorThief = new ColorThief();
+        const dominantColor = colorThief.getColor(image);
+        const navbar = document.getElementById("navbar");
+        navbar.style.backgroundColor = "rgb(" + dominantColor + ")";
+      };
 
       const albumInfo = document.getElementById("albumInfo");
       const releaseDate = responseObj.release_date.slice(0, 4);
@@ -103,7 +104,9 @@ const getAlbumInfo = function () {
                       class="col-2 d-flex justify-content-end align-items-center"
                     >
                       <div class="text-secondary-emphasis fs-6 text-end">
-                        <p class="fs-7 mb-1">${song.rank}</p>
+                        <p class="fs-7 mb-1">${song.rank.toLocaleString(
+                          "it-IT"
+                        )}</p>
                       </div>
                     </div>
                     <div

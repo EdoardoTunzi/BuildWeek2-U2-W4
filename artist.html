@@ -285,9 +285,14 @@
             </div>
             <!--contenuto centrale-->
 
-            <div class="container-fluid p-0 " id="imgbg">
-              <div class="d-flex flex-column justify-content-end p-4 text-white" style="height: 100%;">
-                <div class="d-flex align-items-center justify-content-start mb-0">
+            <div class="container-fluid p-0" id="imgbg">
+              <div
+                class="d-flex flex-column justify-content-end p-4 text-white"
+                style="height: 100%"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-start mb-0"
+                >
                   <img
                     src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/check-circle-fill.svg"
                     alt="Verified"
@@ -299,9 +304,9 @@
                 </div>
                 <!--valore dinamico -->
                 <h1 class="fw-bold display-2" id="nomeArtista">Nome Artista</h1>
-                                <!--valore dinamico -->
+                <!--valore dinamico -->
 
-                <p class="fs-4 mt-0">Numeri ascoltatori</p>
+                <p id="rank" class="fs-4 mt-0">Numeri ascoltatori</p>
               </div>
             </div>
             <div class="container my-5">
@@ -318,32 +323,36 @@
 
               <div class="list-group container my-5">
                 <h4>Popolari</h4>
-                <div
-                  class="d-flex align-items-center justify-content-between py-2"
-                >
-                  <!-- numero canzone-->
-                  <div class="me-3">1</div>
-                  <!-- immagine della copertina della canzone da popolare -->
-                  <div class="me-3">
-                    <img
-                      src="./assets/imgs/main/image-11.jpg"
-                      alt="Icona"
-                      class="rounded"
-                      style="width: 50px; height: 50px"
-                    />
-                  </div>
-                  
-                  <div class="flex-grow-1 d-flex justify-content-between align-items-center">
-                    <div>
-                      <!-- Nome della canzone da popolare -->
-                      <strong>Ocean Avenue</strong>
+                <div id="topSongContainer">
+                  <div
+                    class="d-flex align-items-center justify-content-between py-2"
+                  >
+                    <!-- numero canzone-->
+                    <div class="me-3">1</div>
+                    <!-- immagine della copertina della canzone da popolare -->
+                    <div class="me-3">
+                      <img
+                        src="./assets/imgs/main/image-11.jpg"
+                        alt="Icona"
+                        class="rounded"
+                        style="width: 50px; height: 50px"
+                      />
                     </div>
-                    <div class="text-end">
-                      <!-- numero di visualizzazioni da popolare -->
-                      <small>276.616.912 visualizzazioni</small>
+
+                    <div
+                      class="flex-grow-1 d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <!-- Nome della canzone da popolare -->
+                        <strong>Ocean Avenue</strong>
+                      </div>
+                      <div class="text-end">
+                        <!-- numero di visualizzazioni da popolare -->
+                        <small>276.616.912 visualizzazioni</small>
+                      </div>
+                      <!-- durata canzone da popolare -->
+                      <div>3:18</div>
                     </div>
-                    <!-- durata canzone da popolare -->
-                    <div>3:18</div>
                   </div>
                 </div>
               </div>
