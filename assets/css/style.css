@@ -2,6 +2,10 @@ body {
   font-family: "Circular";
 }
 
+.col-9 {
+  height: calc(100vh - 101px);
+}
+
 /*------------------------side bar------------------------------*/
 #sideBar {
   background-color: #000000;
