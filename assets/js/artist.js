@@ -1,7 +1,15 @@
-const URL = "https://striveschool-api.herokuapp.com/api/deezer/artist/412";
+const receivedUrl = new URLSearchParams(window.location.search);
+const receivedId = receivedUrl.get("artistId");
+const url = "https://deezerdevs-deezer.p.rapidapi.com/artist/";
+const newUrl = url + receivedId;
 
 const infoartist = function () {
-  fetch(URL)
+  fetch(newUrl, {
+    headers: {
+      'x-rapidapi-key': '9490b49734msh25997cbeaddc899p179f88jsn4249ac1f949a',
+      'x-rapidapi-host': 'deezerdevs-deezer.p.rapidapi.com'
+    }
+  }) 
     .then((resp) => {
       if (resp.ok) {
         return resp.json();
@@ -26,8 +34,15 @@ const infoartist = function () {
 
 
 
-};
+}
 
 
 
 infoartist()
+
+
+// https://deezerdevs-deezer.p.rapidapi.com/artist/
+// headers: {
+//		'x-rapidapi-key': '9490b49734msh25997cbeaddc899p179f88jsn4249ac1f949a',
+//		'x-rapidapi-host': 'deezerdevs-deezer.p.rapidapi.com'
+//	}
