@@ -138,9 +138,10 @@
               <p>2021 lol</p>
             </div>
           </div>
+          <!-- 100vh-101px -->
           <!--MAIN-->
-          <div class="col-9">
-            <div>
+          <div class="col-9 overflow-y-auto">
+            <div class="sticky-top bg-dark">
               <div class="d-flex justify-content-between align-items-center">
                 <!--chevrons-->
                 <div>
@@ -151,11 +152,17 @@
                     <i class="bi bi-chevron-right"></i>
                   </button>
                 </div>
-                <form class="d-flex" action="">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                  <input type="text" placeholder="Cerca" />
+                <form class="d-flex p-0" action="">
+                  <button type="submit">
+                    <i class="bi bi-search px-1"></i>
+                  </button>
+                  <input
+                    class="py-1"
+                    type="text"
+                    placeholder="Cosa vuoi ascoltare?"
+                  />
                 </form>
-                <div class="d-flex">
+                <div class="d-flex align-items-center">
                   <!-- offcanvas -->
                   <button
                     class="btn"
@@ -164,7 +171,7 @@
                     data-bs-target="#offcanvasScrolling"
                     aria-controls="offcanvasScrolling"
                   >
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-people fs-5"></i>
                   </button>
 
                   <div
@@ -254,7 +261,7 @@
                   <div class="dropdown d-flex">
                     <button
                       id="dropdownProfile"
-                      class="btn btn-secondary dropdown-toggle d-flex rounded-pill align-items-center p-0 pe-2"
+                      class="btn btn-secondary dropdown-toggle d-flex rounded-pill align-items-center p-0 pe-2 h-75"
                       type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -283,9 +290,248 @@
                 </div>
               </div>
             </div>
+            <!-- MAIN CONTENT -->
+            <!-- PRIMA SEZIONE -->
+            <div id="first-section" class="m-3">
+              <div class="d-flex justify-content-between p-3">
+                <div class="d-flex">
+                  <img
+                    class="img-fluid m-2"
+                    src="./assets/imgs/main/image-15.jpg"
+                    width="210"
+                  />
+
+                  <div class="mx-3">
+                    <p class="fs-7">ALBUM</p>
+                    <h1 class="fw-bold display-4">VIOLA (feat. Salmo)</h1>
+                    <p class="fs-7">Fedez, Salmo</p>
+                    <p class="fs-7">
+                      Ascolta il nuovo singolo di Fedez e Salmo!
+                    </p>
+                    <div class="d-flex align-items-center">
+                      <button
+                        class="spotify-color btn border p-2 px-4 rounded-pill me-2 text-black"
+                      >
+                        Play
+                      </button>
+                      <button class="btn border p-2 px-4 rounded-pill mx-2">
+                        Salva
+                      </button>
+                      <i
+                        class="bi bi-three-dots fs-4 mx-3 text-secondary-emphasis"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    class="letter-spacing btn rounded-pill text-secondary bg-body-tertiary py-1 fs-8"
+                  >
+                    NASCONDI ANNUNCI
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- SECONDA SEZIONE -->
+            <div id="second-section" class="m-1">
+              <div class="container-fluid">
+                <h2 class="my-3">Buonasera</h2>
+                <div class="row">
+                  <div class="col-4 mb-3">
+                    <div
+                      id="album"
+                      class="d-flex bg-body-tertiary rounded-2 align-items-center"
+                    >
+                      <div>
+                        <img
+                          src="https://cdn.discordapp.com/attachments/1297908552219889704/1308472693921812490/Screenshot_2024-11-19_at_17.42.29.png?ex=673e11a8&is=673cc028&hm=fda51b28a17b9519dc9e955697482b21a0d993ef676f1d477f93fffff12d2964&"
+                          width="70"
+                        />
+                      </div>
+                      <p class="m-0 p-2">
+                        early stage emily syndrome <br />
+                        (sett-ott 2022)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div
+                      id="album"
+                      class="d-flex bg-body-tertiary rounded-2 align-items-center"
+                    >
+                      <div>
+                        <img
+                          src="https://cdn.discordapp.com/attachments/1297908552219889704/1308472706487943198/Screenshot_2024-11-19_at_17.42.44.png?ex=673e11ab&is=673cc02b&hm=e7c168b3ff10fb2a2d25baf744365ea09062343417eacea072a8a318f60ab76e&"
+                          width="70"
+                        />
+                      </div>
+                      <p class="m-0 p-2">Be The Young</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div
+                      id="album"
+                      class="d-flex bg-body-tertiary rounded-2 align-items-center"
+                    >
+                      <div>
+                        <img
+                          src="https://cdn.discordapp.com/attachments/1297908552219889704/1308472715103178875/Screenshot_2024-11-19_at_17.42.56.png?ex=673e11ad&is=673cc02d&hm=80d771d537eba8ccaa54d811242c1f3d7f065ab1563673628bc61952e77b1998&"
+                          width="70"
+                        />
+                      </div>
+                      <p class="m-0 p-2">saggio vibes 💃🩰</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div
+                      id="album"
+                      class="d-flex bg-body-tertiary rounded-2 align-items-center"
+                    >
+                      <div>
+                        <img
+                          src="https://misc.scdn.co/liked-songs/liked-songs-300.png
+                          
+                          
+                          
+                          "
+                          width="70"
+                        />
+                      </div>
+                      <p class="m-0 p-2">Brani che ti piacciono</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div
+                      id="album"
+                      class="d-flex bg-body-tertiary rounded-2 align-items-center"
+                    >
+                      <div>
+                        <img
+                          src="https://cdn.discordapp.com/attachments/1297908552219889704/1308472951762587728/Screenshot_2024-11-19_at_17.44.16.png?ex=673e11e5&is=673cc065&hm=c595f066bf5987544850919c293d98bce96dbafddffea4dc6598c2b258fb5d8e&"
+                          width="70"
+                        />
+                      </div>
+                      <p class="m-0 p-2">2021 lol</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div
+                      id="album"
+                      class="d-flex bg-body-tertiary rounded-2 align-items-center"
+                    >
+                      <div>
+                        <img
+                          src="https://cdn.discordapp.com/attachments/1297908552219889704/1308479612862599329/ScreenShot_Tool_-20241119180907.png?ex=673e181a&is=673cc69a&hm=495e3a0e12ed4064a2f02362873369ebf54566009ab7f57ec97326ace1ddcf49&"
+                          width="70"
+                        />
+                      </div>
+                      <p class="m-0 p-2">Deep Dive with Ali Abdal</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- TERZA SEZIONE -->
+            <div id="third-section" class="m-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="mt-3 mb-4">Altro di ciò che ti piace</h3>
+                <span
+                  class="fs-8 text-secondary-emphasis fw-bold letter-spacing"
+                  >VISUALIZZA TUTTO</span
+                >
+              </div>
+              <div id=" cards-container" class="d-flex gap-5">
+                <div class="bg-body-tertiary rounded-2">
+                  <div
+                    class="card border-0 mt-3 p-3 pt-0 pb-5 bg-body-tertiary"
+                    style="width: 14rem"
+                  >
+                    <img
+                      src="https://cdn.discordapp.com/attachments/1297908552219889704/1308485306617692280/ScreenShot_Tool_-20241119183005.png?ex=673e1d67&is=673ccbe7&hm=c11871feaeaf08993700fe1bd0ba371387791e10ebe78b62d89e00d7ae448195&"
+                      class="card-img-top"
+                    />
+                    <div class="card-body p-0 pt-3 ms-2">
+                      <h5 class="card-title fs-6">Hot Hits Italia</h5>
+                      <p class="card-text text-secondary-emphasis fs-7">
+                        La playlist più calda del
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-body-tertiary rounded-2">
+                  <div
+                    class="card border-0 mt-3 p-3 pt-0 pb-5 bg-body-tertiary"
+                    style="width: 14rem"
+                  >
+                    <img
+                      src="https://cdn.discordapp.com/attachments/1297908552219889704/1308485306265108510/ScreenShot_Tool_-20241119183034.png?ex=673e1d67&is=673ccbe7&hm=2e1351423973a7e3dd564ba8772e8fe380c6b41f37e544e66647454c21e145db&"
+                      class="card-img-top"
+                    />
+                    <div class="card-body p-0 pt-3 ms-2">
+                      <h5 class="card-title fs-6">big on the internet</h5>
+                      <p class="card-text text-secondary-emphasis fs-7">
+                        iykyk
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-body-tertiary rounded-2">
+                  <div
+                    class="card border-0 mt-3 p-3 pt-0 pb-5 bg-body-tertiary"
+                    style="width: 14rem"
+                  >
+                    <img
+                      src="https://cdn.discordapp.com/attachments/1297908552219889704/1308485305745145897/ScreenShot_Tool_-20241119183145.png?ex=673e1d67&is=673ccbe7&hm=27e0daf3adee95eb3e6d9cc3523f3adab3d059a764c759262e59b2eaa70359a8&"
+                      class="card-img-top"
+                    />
+                    <div class="card-body p-0 pt-3 ms-2">
+                      <h5 class="card-title fs-6">Pop Rising</h5>
+                      <p class="card-text text-secondary-emphasis fs-7">
+                        The hits of tomorrow ar on
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-body-tertiary rounded-2">
+                  <div
+                    class="card border-0 mt-3 p-3 pt-0 pb-5 bg-body-tertiary"
+                    style="width: 14rem"
+                  >
+                    <img
+                      src="https://cdn.discordapp.com/attachments/1297908552219889704/1308485305354944613/ScreenShot_Tool_-20241119183200_1.png?ex=673e1d67&is=673ccbe7&hm=3039829ab027edb08ad1a76a41c985d2788d3d3004670a0ba2859434e438a7ea&"
+                      class="card-img-top"
+                    />
+                    <div class="card-body p-0 pt-3 ms-2">
+                      <h5 class="card-title fs-6">Canzoni Tristi</h5>
+                      <p class="card-text text-secondary-emphasis fs-7">
+                        it's ok not to be ok :'(
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-body-tertiary rounded-2">
+                  <div
+                    class="card border-0 mt-3 p-3 pt-0 pb-5 bg-body-tertiary"
+                    style="width: 14rem"
+                  >
+                    <img
+                      src="https://cdn.discordapp.com/attachments/1297908552219889704/1308485304768008235/ScreenShot_Tool_-20241119183220.png?ex=673e1d67&is=673ccbe7&hm=cb5018bcc0d8d010352cff5ddf9b78bcaf3952abbd15d4293b97e4f0b60466cc&"
+                      class="card-img-top"
+                    />
+                    <div class="card-body p-0 pt-3 ms-2">
+                      <h5 class="card-title fs-6">in tendenza</h5>
+                      <p class="card-text text-secondary-emphasis fs-7">
+                        Viral &amp; Trending: le canzoni
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
       <!--playerbar-->
       <div
         id="playerBar"
