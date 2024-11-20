@@ -47,14 +47,16 @@ const getAlbumInfo = function () {
                     
                     alt=""
                     height="250px"
+                    
                   />`;
-      //   const image = document.getElementById("img-shadow");
-      //   image.onload = function () {
-      //     const colorThief = new ColorThief();
-      //     const dominantColor = colorThief.getColor(image);
-      //     const navbar = document.getElementById("navbar");
-      //     navbar.style.backgroundColor = `rgb(${dominantColor[0]}, ${dominantColor[1]},${dominantColor[2]})`;
-      //   };
+      // const image = document.getElementById("img-shadow");
+      // image.onload = function () {
+      //   const colorThief = new ColorThief();
+      //   const dominantColor = colorThief.getColor(image);
+      //   const navbar = document.getElementById("navbar");
+      //   navbar.style.backgroundColor = "rgb(" + dominantColor + ")";
+      // };
+
       const albumInfo = document.getElementById("albumInfo");
       const releaseDate = responseObj.release_date.slice(0, 4);
       albumInfo.innerHTML = `
