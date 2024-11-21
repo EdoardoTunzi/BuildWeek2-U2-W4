@@ -139,22 +139,19 @@
             </div>
           </div>
           <!--MAIN-->
-          <div class="col-9 p-0">
-            <div>
+          <div class="col-9 p-0 overflow-y-auto">
+            <div class="sticky-top px-3">
               <div class="d-flex justify-content-between align-items-center">
                 <!--chevrons-->
                 <div>
-                  <button class="btnChevron">
+                  <button id="backButton" class="btnChevron">
                     <i class="bi bi-chevron-left"></i>
                   </button>
                   <button class="btnChevron">
                     <i class="bi bi-chevron-right"></i>
                   </button>
                 </div>
-                <form class="d-flex" action="">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                  <input type="text" placeholder="Cerca" />
-                </form>
+
                 <div class="d-flex">
                   <!-- offcanvas -->
                   <button
@@ -309,7 +306,7 @@
                 <p id="rank" class="fs-4 mt-0">Numeri ascoltatori</p>
               </div>
             </div>
-            <div class="container my-5">
+            <div class="container-fluid px-4 my-5">
               <div class="d-flex align-items-center mb-4">
                 <button
                   class="btn btn-success rounded-circle d-flex align-items-center justify-content-center"
@@ -321,53 +318,64 @@
                 <button class="btn btn-outline-light ms-3">FOLLOWING</button>
               </div>
 
-              <div class="list-group container my-5">
-                <h4>Popolari</h4>
-                <div id="topSongContainer">
-                  <div
-                    class="d-flex align-items-center justify-content-between py-2"
-                  >
-                    <!-- numero canzone-->
-                    <div class="me-3">1</div>
-                    <!-- immagine della copertina della canzone da popolare -->
-                    <div class="me-3">
+              <div class="container-fluid">
+                <div class="row gap-1">
+                  <div class="col-7 list-group my-5">
+                    <h4>Popolari</h4>
+                    <div id="topSongContainer" class="container-fluid">
+                      <div
+                        class="d-flex align-items-center justify-content-between py-2"
+                      >
+                        <!-- numero canzone-->
+                        <div class="me-3">1</div>
+                        <!-- immagine della copertina della canzone da popolare -->
+                        <div class="me-3">
+                          <img
+                            src="./assets/imgs/main/image-11.jpg"
+                            alt="Icona"
+                            class="rounded"
+                            style="width: 50px; height: 50px"
+                          />
+                        </div>
+
+                        <div
+                          class="flex-grow-1 d-flex justify-content-between align-items-center"
+                        >
+                          <div>
+                            <!-- Nome della canzone da popolare -->
+                            <strong>Ocean Avenue</strong>
+                          </div>
+                          <div class="text-end">
+                            <!-- numero di visualizzazioni da popolare -->
+                            <small>276.616.912 visualizzazioni</small>
+                          </div>
+                          <!-- durata canzone da popolare -->
+                          <div>3:18</div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="ms-3 fs-7 text-secondary-emphasis">
+                      VISUALIZZA ALTRO
+                    </p>
+                  </div>
+                  <div class="col-4">
+                    <h4 class="mt-4">Brani che ti piacciono</h4>
+                    <div class="d-flex align-items-center">
                       <img
-                        src="./assets/imgs/main/image-11.jpg"
-                        alt="Icona"
-                        class="rounded"
+                        src="./assets/imgs/main/image-15.jpg"
+                        class="rounded-circle me-3"
+                        alt="Profile"
                         style="width: 50px; height: 50px"
                       />
-                    </div>
-
-                    <div
-                      class="flex-grow-1 d-flex justify-content-between align-items-center"
-                    >
                       <div>
-                        <!-- Nome della canzone da popolare -->
-                        <strong>Ocean Avenue</strong>
+                        <span
+                          >Hai messo <strong>Mi piace</strong> a 11 brani</span
+                        >
+                        <br />
+                        <small>Di Yellowcard</small>
                       </div>
-                      <div class="text-end">
-                        <!-- numero di visualizzazioni da popolare -->
-                        <small>276.616.912 visualizzazioni</small>
-                      </div>
-                      <!-- durata canzone da popolare -->
-                      <div>3:18</div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <h4 class="mt-4">Brani che ti piacciono</h4>
-              <div class="d-flex align-items-center">
-                <img
-                  src="./assets/imgs/main/image-15.jpg"
-                  class="rounded-circle me-3"
-                  alt="Profile"
-                  style="width: 50px; height: 50px"
-                />
-                <div>
-                  <span>Hai messo <strong>Mi piace</strong> a 11 brani</span>
-                  <br />
-                  <small>Di Yellowcard</small>
                 </div>
               </div>
             </div>
@@ -383,14 +391,15 @@
         <!--div sinistra-->
         <div class="d-flex align-items-center">
           <img
+            id="pb-img"
             class="mx-2"
             src="./assets/imgs/main/image-1.jpg"
             alt="album image"
             width="70px"
           />
           <div class="lh-1 small">
-            <p>Nome brano</p>
-            <p>Artista</p>
+            <p id="pb-nome">Nome brano</p>
+            <p id="pb-artista">Artista</p>
           </div>
           <i class="bi bi-suit-heart ms-3"></i>
         </div>
@@ -444,7 +453,7 @@
             >
               <div class="progress-bar" style="width: 25%"></div>
             </div>
-            <span>2:30</span>
+            <span id="pb-duration">2:30</span>
           </div>
         </div>
         <!--div destra-->

@@ -145,17 +145,14 @@
               <div class="d-flex justify-content-between align-items-center">
                 <!--chevrons-->
                 <div>
-                  <button class="btnChevron">
+                  <button id="backButton" class="btnChevron">
                     <i class="bi bi-chevron-left"></i>
                   </button>
                   <button class="btnChevron">
                     <i class="bi bi-chevron-right"></i>
                   </button>
                 </div>
-                <form class="d-flex" action="">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-                  <input type="text" placeholder="Cerca" />
-                </form>
+
                 <div class="d-flex">
                   <!-- offcanvas -->
                   <button
@@ -284,10 +281,7 @@
                 </div>
               </div>
             </div>
-            <div
-              id="section-shadow"
-              class="container-fluid bg-danger pb-4 pt-4"
-            >
+            <div id="section-shadow" class="container-fluid pb-4 pt-4">
               <!-- album main section -->
               <div class="d-flex mt-4 mx-3 align-items-end">
                 <div id="responsiveProfileImg" class="shadow">
@@ -391,14 +385,15 @@
         <!--div sinistra-->
         <div class="d-flex align-items-center">
           <img
+            id="pb-img"
             class="mx-2"
             src="./assets/imgs/main/image-1.jpg"
             alt="album image"
             width="70px"
           />
           <div class="lh-1 small">
-            <p>Nome brano</p>
-            <p>Artista</p>
+            <p id="pb-nome">Nome brano</p>
+            <p id="pb-artista">Artista</p>
           </div>
           <i class="bi bi-suit-heart ms-3"></i>
         </div>
@@ -452,7 +447,7 @@
             >
               <div class="progress-bar" style="width: 25%"></div>
             </div>
-            <span>2:30</span>
+            <span id="pb-duration">2:30</span>
           </div>
         </div>
         <!--div destra-->
