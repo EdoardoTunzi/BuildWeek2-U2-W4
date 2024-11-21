@@ -6,6 +6,7 @@ body {
 #sideBar {
   background-color: #000000;
   height: calc(100vh - 101px);
+  /*width: 20%;*/
   color: #b2b2b2;
 }
 
@@ -111,3 +112,20 @@ input[type="range"]::-webkit-slider-thumb {
 .fs-8 {
   font-size: 10px;
 }
+/* impostare grandezza */
+#riduzione-pagina {
+  width: 100%;  
+  
+}
+
+/* impostazioni della larghezza con l'apertura del coso a destra+ animazione */
+#riduzione-pagina.riduzione-pagina {
+  width: 84%; 
+  transition: width 0.3s ease-in-out; 
+}
+
+#offcanvasScrolling{
+  max-height: calc(100vh - 101px);
+  width: 17%;
+}
+
