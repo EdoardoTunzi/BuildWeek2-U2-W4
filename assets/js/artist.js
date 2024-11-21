@@ -44,26 +44,23 @@ const infoartist = function () {
     const rank = document.getElementById("rank");
     const formattedNumber = dataArtist.nb_fan.toLocaleString("it-IT");
     rank.innerText = `${formattedNumber} ascoltatori mensili`;
+    const imgArtista = document.getElementById("smallImg");
+    const artName = document.getElementById("artName");
+    imgArtista.src = `${dataArtist.picture_small}`;
+    artName.innerText = dataArtist.name;
   };
   const trackFetch = function (trackUrl) {
-    fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/artist/13/top?limit=5",
-      {
-        headers: {
-          "x-rapidapi-key":
-            "9490b49734msh25997cbeaddc899p179f88jsn4249ac1f949a",
-          "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
-        }
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${receivedId}/top?limit=5`, {
+      headers: {
+        "x-rapidapi-key": "9490b49734msh25997cbeaddc899p179f88jsn4249ac1f949a",
+        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
       }
-    )
+    })
       .then((response) => {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error(
-            "non siamo riusciti ad elaborare la richiesta",
-            response.statusText
-          );
+          throw new Error("non siamo riusciti ad elaborare la richiesta", response.statusText);
         }
       })
       .then((responseObj) => {
@@ -98,7 +95,7 @@ const infoartist = function () {
                      </div>
 
                      <div
-                       class=" d-flex justify-content-between align-items-center"
+                       class=" d-flex justify-content-between align-items-center text-start"
                      >
                        <div>
                          <!-- Nome della canzone da popolare -->
@@ -112,17 +109,13 @@ const infoartist = function () {
                       class="col-2 d-flex justify-content-end align-items-center"
                     >
                       <div class="text-secondary-emphasis fs-6 text-end">
-                        <p class="fs-7 mb-1">${topSong.rank.toLocaleString(
-                          "it-IT"
-                        )}</p>
+                        <p class="fs-7 mb-1">${topSong.rank.toLocaleString("it-IT")}</p>
                       </div>
                     </div>
                     <div
                       class="col-1 offset-4 d-flex align-items-center justify-content-center"
                     >
-                      <p class="fs-7 text-secondary-emphasis mb-0">${formatSecondsTomin(
-                        topSong.duration
-                      )}</p>
+                      <p class="fs-7 text-secondary-emphasis mb-0">${formatSecondsTomin(topSong.duration)}</p>
                     </div>`;
           topSongContainer.appendChild(songRow);
           if (i == 0) {
@@ -160,27 +153,25 @@ function modPlayerbar(i) {
   playerbarDuration.innerText = `${formatSecondsTomin(topSong.duration)}`;
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const offcanvas = document.getElementById("offcanvasScrolling");
   const contenuto = document.getElementById("riduzione-pagina");
-  console.log(contenuto)
+  console.log(contenuto);
 
   // Verifica che gli elementi esistano
   if (offcanvas && contenuto) {
-    
     const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
 
     // classe aggiunta con il bottone
-    offcanvas.addEventListener('shown.bs.offcanvas', function () {
+    offcanvas.addEventListener("shown.bs.offcanvas", function () {
       contenuto.classList.add("riduzione-pagina");
-      console.log("bottone up")
+      console.log("bottone up");
     });
 
     // classe tolta
-    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+    offcanvas.addEventListener("hidden.bs.offcanvas", function () {
       contenuto.classList.remove("riduzione-pagina");
-      console.log("bottone down")
+      console.log("bottone down");
     });
   }
 });

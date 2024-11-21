@@ -114,18 +114,16 @@ input[type="range"]::-webkit-slider-thumb {
 }
 /* impostare grandezza */
 #riduzione-pagina {
-  width: 100%;  
-  
+  width: auto;
 }
 
 /* impostazioni della larghezza con l'apertura del coso a destra+ animazione */
 #riduzione-pagina.riduzione-pagina {
-  width: 84%; 
-  transition: width 0.3s ease-in-out; 
+  width: 84%;
+  transition: width 0.3s ease-in-out;
 }
 
-#offcanvasScrolling{
+#offcanvasScrolling {
   max-height: calc(100vh - 101px);
   width: 17%;
 }
-
