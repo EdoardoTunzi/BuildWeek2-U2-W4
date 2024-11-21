@@ -31,3 +31,6 @@ h1 {
 #trackListHeader p {
   margin-bottom: 0;
 }
+.col-9 {
+  height: calc(100vh - 101px);
+}

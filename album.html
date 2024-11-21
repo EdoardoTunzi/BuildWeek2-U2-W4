@@ -23,7 +23,7 @@
       <div class="container-fluid">
         <div class="row">
           <!--SIDEBAR-->
-          <div id="sideBar" class="col-3">
+          <div id="sideBar" class="col-3 d-md-block d-none">
             <div>
               <i class="bi bi-three-dots"></i>
               <div class="d-flex gap-2">
@@ -140,8 +140,8 @@
             </div>
           </div>
           <!--MAIN-->
-          <div class="col-9 p-0 overflow-y-auto">
-            <div id="navbar" class="sticky-top px-3">
+          <div class="col-12 col-md-9 p-0 overflow-y-auto">
+            <div id="navbar" class="sticky-top px-3 d-none d-md-block">
               <div class="d-flex justify-content-between align-items-center">
                 <!--chevrons-->
                 <div>
@@ -283,8 +283,10 @@
             </div>
             <div id="section-shadow" class="container-fluid pb-4 pt-4">
               <!-- album main section -->
-              <div class="d-flex mt-4 mx-3 align-items-end">
-                <div id="responsiveProfileImg" class="shadow">
+              <div
+                class="d-md-flex mt-4 mx-0 mx-md-3 align-items-end text-center text-md-start"
+              >
+                <div id="responsiveProfileImg" class="shadow d-inline-block">
                   <img
                     id="img-shadow"
                     src="assets/imgs/main/image-1.jpg"
@@ -292,8 +294,8 @@
                     height="250px"
                   />
                 </div>
-                <div id="albumInfo" class="mx-4">
-                  <p class="fs-6 mb-1">ALBUM</p>
+                <div id="albumInfo" class="mx-0 mx-md-4 text-start">
+                  <p class="fs-6 mb-1 d-none d-md-inline">ALBUM</p>
                   <h1 class="mb-4">Gioventù brucata</h1>
                   <div class="d-flex align-items-center">
                     <img

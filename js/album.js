@@ -66,22 +66,30 @@ const getAlbumInfo = function () {
       const albumInfo = document.getElementById("albumInfo");
       const releaseDate = responseObj.release_date.slice(0, 4);
       albumInfo.innerHTML = `
-      <p class="fs-6 mb-1">ALBUM</p>
-                  <h1 class="mb-4">${responseObj.title}</h1>
-                  <div class="d-flex align-items-center">
+      <p class="fs-6 mb-1 d-none d-md-inline">ALBUM</p>
+                  <h1 class="mb-4 d-none d-md-block">${responseObj.title}</h1>
+                  <h1 class="mb-4 fs-1 pt-4 d-block d-md-none">${
+                    responseObj.title
+                  }</h1>
+                  <div class="d-md-flex align-items-center">
                     <img
-                      class="rounded-circle"
+                      class="rounded-circle d-inline-block"
                       src="${responseObj.artist.picture}"
                       alt=""
                       height="30px"
                     />
-                    <p class="m-0 mx-1">
+                    <p class="m-0 mx-1 d-inline-block">
                       ${
                         responseObj.artist.name
-                      } &middot; ${releaseDate} &middot; ${
+                      } <span class="d-none d-md-inline">
+                         &middot; ${releaseDate} &middot; ${
         responseObj.nb_tracks
       } brani
-                      &middot; ${formatSecondsToMinSec(responseObj.duration)}.
+                        &middot; ${formatSecondsToMinSec(responseObj.duration)}.
+                       </span>
+                    </p>
+                    <p class="d-block d-md-none text-secondary pt-2">  
+                    Album &middot; ${releaseDate}
                     </p>
                     </div>`;
       const tracklistBody = document.getElementById("trackListBody");
