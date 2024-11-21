@@ -2,7 +2,7 @@ body {
   font-family: "Circular";
 }
 
-.col-9 {
+.col-sm-9 {
   height: calc(100vh - 101px);
 }
 
@@ -50,12 +50,14 @@ form {
   background-color: #131313;
   padding-inline: 15px;
   border-radius: 2rem;
+  width: 350px;
 }
 
 form button,
 form input {
   background: transparent;
   border: none;
+  outline: none;
 }
 #dropdownProfile {
   background-color: #131313;
@@ -65,6 +67,8 @@ form input {
 .search-card {
   overflow: hidden;
   position: relative;
+  min-height: 170px;
+  min-width: 200px;
 }
 .search-image {
   border-radius: 4px;
