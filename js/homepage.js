@@ -2,12 +2,20 @@ const searchForm = document.querySelector("form");
 const URL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";
 const albumSectionTitle = document.getElementById("albumSectionName");
 const artistSectionTitle = document.getElementById("artistSectionTitle");
+
+//eventlistener bottone nascondi annunci
+const hero = document.getElementById("first-section");
+const hideBtn = document.querySelector(".letter-spacing");
+hideBtn.addEventListener("click", function () {
+  hero.classList.add("d-none"); // Nasconde il div
+});
+
 //funzione per search
-
 const fetchData = (e) => {
-  e.preventDefault();
+  // e.preventDefault();
 
-  const queryInput = document.querySelector("form input").value;
+  const queryInput = " rock 2024";
+  //const queryInput = document.querySelector("form input").value;
   fetch(URL + queryInput, {
     headers: {
       "x-rapidapi-key": "9490b49734msh25997cbeaddc899p179f88jsn4249ac1f949a",
@@ -22,15 +30,15 @@ const fetchData = (e) => {
     .then((queryResultObj) => {
       const cardsContainer = document.getElementById("cards-container");
       cardsContainer.innerHTML = "";
-      albumSectionTitle.innerText = "Albums";
-      const artistCardContainer = document.getElementById(
-        "artistCardsContainer"
-      );
-      artistCardContainer.innerHTML = "";
-      artistSectionTitle.innerText = "Artists";
+      //albumSectionTitle.innerText = "Albums";
+      const artistCardContainer = document.getElementById("artistCardsContainer");
+      //artistCardContainer.innerHTML = "";
+      //artistSectionTitle.innerText = "Artists";
       const artistArray = [];
       const albumArray = [];
       queryResultObj.data.forEach((obj) => {
+        console.log(obj);
+
         if (!albumArray.includes(obj.album.id)) {
           const card = document.createElement("div");
           card.classList.add("bg-body-tertiary");
@@ -56,7 +64,7 @@ const fetchData = (e) => {
 
         //fetch artist cards
 
-        if (!artistArray.includes(obj.artist.id)) {
+        /*if (!artistArray.includes(obj.artist.id)) {
           const artistCard = document.createElement("div");
           artistCard.classList.add("col-4");
           artistCard.classList.add("mb-3");
@@ -77,8 +85,12 @@ const fetchData = (e) => {
         `;
           artistCardContainer.appendChild(artistCard);
           artistArray.push(obj.artist.id);
-        }
+        }*/
       });
     })
     .catch((error) => console.log(error));
+};
+
+window.onload = () => {
+  fetchData();
 };
