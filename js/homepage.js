@@ -23,7 +23,9 @@ const fetchData = (e) => {
       const cardsContainer = document.getElementById("cards-container");
       cardsContainer.innerHTML = "";
       albumSectionTitle.innerText = "Albums";
-      const artistCardContainer = document.getElementById("artistCardsContainer");
+      const artistCardContainer = document.getElementById(
+        "artistCardsContainer"
+      );
       artistCardContainer.innerHTML = "";
       artistSectionTitle.innerText = "Artists";
       const artistArray = [];
@@ -80,5 +82,3 @@ const fetchData = (e) => {
     })
     .catch((error) => console.log(error));
 };
-
-searchForm.onsubmit = fetchData;
