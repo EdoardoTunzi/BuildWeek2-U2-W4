@@ -2,7 +2,7 @@ body {
   font-family: "Circular";
 }
 
-.col-9 {
+.col-md-9 {
   height: calc(100vh - 101px);
 }
 
