@@ -45,9 +45,13 @@ const infoartist = function () {
     const formattedNumber = dataArtist.nb_fan.toLocaleString("it-IT");
     rank.innerText = `${formattedNumber} ascoltatori mensili`;
     const imgArtista = document.getElementById("smallImg");
+    const imgArtista2 = document.getElementById("smallImg2")
     const artName = document.getElementById("artName");
+    const artName2 = document.getElementById("artName2")
     imgArtista.src = `${dataArtist.picture_small}`;
     artName.innerText = dataArtist.name;
+    imgArtista2.src = `${dataArtist.picture_small}`;
+    artName2.innerText = dataArtist.name;
   };
   const trackFetch = function (trackUrl) {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${receivedId}/top?limit=5`, {
@@ -106,7 +110,7 @@ const infoartist = function () {
                     </div>
                     </div>
                     <div
-                      class="col-2 d-flex justify-content-end align-items-center"
+                      class="col-2 d-none d-sm-flex justify-content-end align-items-center"
                     >
                       <div class="text-secondary-emphasis fs-6 text-end">
                         <p class="fs-7 mb-1">${topSong.rank.toLocaleString("it-IT")}</p>

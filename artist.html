@@ -19,7 +19,7 @@
       <div class="container-fluid">
         <div class="row" id="riduzione-pagina">
           <!--SIDEBAR-->
-          <div id="sideBar" class="col-3">
+          <div id="sideBar" class="col-3 d-none d-md-block">
             <div>
               <i class="bi bi-three-dots"></i>
               <div class="d-flex gap-2">
@@ -108,8 +108,11 @@
             </div>
           </div>
           <!--MAIN-->
-          <div class="col-9 p-0 overflow-y-auto">
-            <div class="sticky-top px-3">
+          <div class=" col-12 col-md-9 p-0 overflow-y-auto ">
+            
+          
+          
+            <div class="sticky-top px-3 d-none d-sm-block">
               <div class="d-flex justify-content-between align-items-center">
                 <!--chevrons-->
                 <div>
@@ -120,6 +123,7 @@
                     <i class="bi bi-chevron-right"></i>
                   </button>
                 </div>
+
 
                 <div class="d-flex">
                   <!-- offcanvas -->
@@ -218,7 +222,13 @@
             </div>
             <!--contenuto centrale-->
 
-            <div class="container-fluid p-0" id="imgbg">
+            <div class="container-fluid p-0 position-relative" id="imgbg">
+              
+              <button id="backButton" class="btnChevron d-sm-none position-absolute top-30 start-30">
+                <i class="bi bi-chevron-left "></i>
+              </button>
+           
+
               <div class="d-flex flex-column justify-content-end p-4 text-white" style="height: 100%">
                 <div class="d-flex align-items-center justify-content-start mb-0">
                   <i class="bi bi-patch-check-fill text-primary me-2"></i>
@@ -247,9 +257,20 @@
 
               <div class="container-fluid">
                 <div class="row gap-1">
-                  <div class="col-7 list-group my-5">
+                  <div class="col-12 col-md-4 d-flex flex-column d-block d-sm-none">
+                    <h4 class="mt-4">Brani che ti piacciono</h4>
+                    <div class="d-flex align-items-center">
+                      <img id="smallImg2" src="./assets/imgs/main/image-15.jpg" class="rounded-circle me-3" alt="Profile" style="width: 50px; height: 50px" />
+                      <div>
+                        <span>Hai messo <strong>Mi piace</strong> a 11 brani</span>
+                        <br />
+                        <small>Di <span id="artName2">Yellowcard</span></small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-7 list-group my-5 ">
                     <h4>Popolari</h4>
-                    <div id="topSongContainer" class="container-fluid">
+                    <div id="topSongContainer" class="container-fluid ">
                       <div class="d-flex align-items-center justify-content-between py-2">
                         <!-- numero canzone-->
                         <div class="me-3">1</div>
@@ -274,7 +295,7 @@
                     </div>
                     <p class="ms-3 fs-7 text-secondary-emphasis">VISUALIZZA ALTRO</p>
                   </div>
-                  <div class="col-4">
+                  <div class="col-12 col-md-4 d-flex flex-column d-none d-sm-block">
                     <h4 class="mt-4">Brani che ti piacciono</h4>
                     <div class="d-flex align-items-center">
                       <img id="smallImg" src="./assets/imgs/main/image-15.jpg" class="rounded-circle me-3" alt="Profile" style="width: 50px; height: 50px" />
@@ -292,8 +313,68 @@
         </div>
       </div>
 
+<!--Mobile footer-->
+<div class="fixed-bottom">
+  <!--mobile playerbar-->
+  <div id="mobile-player" class="d-flex align-items-center justify-content-between d-sm-none bg-body-secondary rounded-3 p-3">
+    <div class="me-2"><img src="./assets/imgs/main/image-11.jpg" class="rounded-circle" alt="" width="40" /></div>
+    <p class="mb-0 me-2 text-truncate fs-5 fw-bold">Imagine Dragon - Eyes Closed</p>
+    <div class="d-flex align-items-center">
+      <svg fill="#DCE0E4" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI" width="30">
+        <path
+          d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15h-6.5A1.75 1.75 0 0 1 6 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25h-6.5zm-6 0a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 0 1 0 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z"
+        ></path>
+        <path d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+      </svg>
+      <i class="bi bi-heart fs-2 mx-4"></i>
+      <i class="bi bi-play-fill fs-1"></i>
+    </div>
+  </div>
+  <!--mobile navbar-->
+  <nav id="mobile-nav" class="navbar bg-transparent d-sm-none">
+    <div class="container-fluid d-flex justify-content-around">
+      <a class="navbar-brand text-center ms-3" href="./homepage.html">
+        <svg fill="#DCE0E4" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE" width="35">
+          <path
+            d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+          ></path>
+        </svg>
+        <p class="mb-0 small">Home</p>
+      </a>
+
+      <a class="navbar-brand text-center me-0" href="./search.html">
+        <svg
+          fill="#A7ACB0"
+          data-encore-id="icon"
+          role="img"
+          aria-hidden="true"
+          data-testid="search-icon"
+          class="Svg-sc-ytk21e-0 bHdpig M9l40ptEBXPm03dU3X1k"
+          viewBox="0 0 24 24"
+          width="35"
+        >
+          <path
+            d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+          ></path>
+        </svg>
+        <p class="mb-0 small text-secondary-emphasis">Cerca</p>
+      </a>
+
+      <a class="navbar-brand text-center" href="#">
+        <svg fill="#A7ACB0" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE" width="35">
+          <path
+            d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+          ></path>
+        </svg>
+        <p class="mb-0 small text-secondary-emphasis">La tua libreria</p>
+      </a>
+    </div>
+  </nav>
+</div>
+
+
       <!--playerbar-->
-      <div id="playerBar" class="d-flex justify-content-between align-items-center border-top p-2 z fixed-bottom z-3 bg-dark">
+      <div id="playerBar" class="d-flex justify-content-between align-items-center border-top p-2 z fixed-bottom z-3 bg-dark col-12 d-none d-md-flex z-3 ">
         <!--div sinistra-->
         <div class="d-flex align-items-center">
           <img id="pb-img" class="mx-2" src="./assets/imgs/main/image-1.jpg" alt="album image" width="70px" />
