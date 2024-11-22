@@ -127,3 +127,14 @@ input[type="range"]::-webkit-slider-thumb {
   max-height: calc(100vh - 101px);
   width: 17%;
 }
+@media (max-width: 767px) {
+  #playerBar img {
+      width: 50px; /* Riduce la dimensione dell'immagine */
+  }
+
+  .playerBar .lh-1 small {
+      display: block;
+      font-size: 12px; /* Riduce la dimensione del testo per i numeri di ascoltatori */
+      margin-top: 5px;
+  }
+}

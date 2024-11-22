@@ -62,8 +62,23 @@ form input {
   border: none;
   font-size: 13px;
 }
+/* impostare grandezza */
+#riduzione-pagina {
+  width: auto;
+}
 
+/* impostazioni della larghezza con l'apertura del coso a destra+ animazione */
+#riduzione-pagina.riduzione-pagina {
+  width: 84%;
+  transition: width 0.3s ease-in-out;
+}
+
+#offcanvasScrolling {
+  max-height: calc(100vh - 101px);
+  width: 17%;
+}
 #first-section {
+  position: relative;
   background: linear-gradient(
     187deg,
     #000 0%,
@@ -73,7 +88,6 @@ form input {
     #000 100%
   );
 }
-
 .btn-custom {
   border: 1px solid white;
 }
@@ -90,6 +104,9 @@ form input {
 }
 .spotify-color {
   background-color: #1cd760;
+}
+.spotify-green {
+  color: #1cd760;
 }
 
 /*----------------------- player bar----------------------------*/
@@ -122,4 +139,29 @@ input[type="range"]::-webkit-slider-thumb {
   width: 0;
   background: transparent;
   border: none;
+}
+
+/*----------------------- player bar mobile version----------------------------*/
+#mobile-nav {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6898560725552051) 25%,
+    rgba(0, 0, 0, 0.5258182176656151) 50%,
+    rgba(0, 0, 0, 0.54600749211356465) 90%
+  );
+}
+
+/*----------------------- media query----------------------------*/
+@media screen and (max-width: 768px) {
+  .cardMob,
+  .cardMob .card {
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+  }
+
+  .cardMob a {
+    width: 50% !important;
+  }
 }

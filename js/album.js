@@ -66,22 +66,33 @@ const getAlbumInfo = function () {
       const albumInfo = document.getElementById("albumInfo");
       const releaseDate = responseObj.release_date.slice(0, 4);
       albumInfo.innerHTML = `
-      <p class="fs-6 mb-1">ALBUM</p>
-                  <h1 class="mb-4">${responseObj.title}</h1>
-                  <div class="d-flex align-items-center">
+      <p class="fs-6 mb-1 d-none d-md-inline">ALBUM</p>
+                  <h1 class="mb-4 d-none d-md-block">${responseObj.title}</h1>
+                  <h1 class="mb-2 fs-1 pt-4 d-block d-md-none">${
+                    responseObj.title
+                  }</h1>
+                  <div class="d-md-flex align-items-center">
                     <img
-                      class="rounded-circle"
+                      class="rounded-circle d-inline-block"
                       src="${responseObj.artist.picture}"
                       alt=""
                       height="30px"
                     />
-                    <p class="m-0 mx-1">
+                    <p class="m-0 mx-1 d-inline-block">
+                    <a class="text-light text-decoration-none" href="./artist.html?artistId=${
+                      responseObj.artist.id
+                    }">
                       ${
                         responseObj.artist.name
-                      } &middot; ${releaseDate} &middot; ${
+                      }</a> <span class="d-none d-md-inline">
+                         &middot; ${releaseDate} &middot; ${
         responseObj.nb_tracks
       } brani
-                      &middot; ${formatSecondsToMinSec(responseObj.duration)}.
+                        &middot; ${formatSecondsToMinSec(responseObj.duration)}.
+                       </span>
+                    </p>
+                    <p class="d-block d-md-none text-secondary pt-2">  
+                    Album &middot; ${releaseDate}
                     </p>
                     </div>`;
       const tracklistBody = document.getElementById("trackListBody");
@@ -94,10 +105,10 @@ const getAlbumInfo = function () {
         songRow.classList.add("row");
         songRow.classList.add("mb-3");
 
-        songRow.innerHTML = `<div class="col-5">
-                      <div class="mx-2 text-secondary-emphasis d-flex">
-                        <button class="btn d-flex align-items-center text-start" onclick="modPlayerbar(${i})">
-                          <p class="fs-6 m-0 d-flex align-items-center">${
+        songRow.innerHTML = `<div class="col-8 col-md-5">
+                      <div class=" mx-0 mx-md-2 text-secondary-emphasis d-flex">
+                        <button class="px-0 px-md-1 btn d-flex align-items-center text-start" onclick="modPlayerbar(${i})">
+                          <p class="fs-6 m-0 d-none d-md-flex align-items-center">${
                             i + 1
                           }</p>
   
@@ -105,13 +116,15 @@ const getAlbumInfo = function () {
                             <p class="fs-7 mb-1 text-light">
                               ${song.title}
                             </p>
-                            <p class="fs-7 mb-0">${responseObj.artist.name}</p>
+                            <p class="fs-7 mb-0 text-secondary-emphasis">${
+                              responseObj.artist.name
+                            }</p>
                           </div>
                         </button>
                       </div>
                     </div>
                     <div
-                      class="col-2 d-flex justify-content-end align-items-center"
+                      class="col-2 d-none d-md-flex justify-content-end align-items-center"
                     >
                       <div class="text-secondary-emphasis fs-6 text-end">
                         <p class="fs-7 mb-1">${song.rank.toLocaleString(
@@ -120,11 +133,16 @@ const getAlbumInfo = function () {
                       </div>
                     </div>
                     <div
-                      class="col-1 offset-4 d-flex align-items-center justify-content-center"
+                      class="col-1 d-none d-md-flex offset-4 align-items-center justify-content-center"
                     >
                       <p class="fs-7 text-secondary-emphasis mb-0">${formatSecondsTomin(
                         song.duration
                       )}</p>
+                    </div>
+                    <div
+                      class="col-2 offset-2 d-flex d-md-none align-items-center justify-content-end "
+                    >
+                      <i class="bi bi-three-dots-vertical fs-3"></i>
                     </div>`;
         tracklistBody.appendChild(songRow);
       });
@@ -135,6 +153,10 @@ window.onload = getAlbumInfo;
 
 const backButton = document.getElementById("backButton");
 backButton.onclick = function () {
+  window.history.back();
+};
+const btnBack = document.getElementById("btn-back");
+btnBack.onclick = function () {
   window.history.back();
 };
 
@@ -150,3 +172,26 @@ function modPlayerbar(i) {
   playerbarArtist.innerText = `${topSong.artist.name}`;
   playerbarDuration.innerText = `${formatSecondsTomin(topSong.duration)}`;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const offcanvas = document.getElementById("offcanvasScrolling");
+  const contenuto = document.getElementById("riduzione-pagina");
+  console.log(contenuto);
+
+  // Verifica che gli elementi esistano
+  if (offcanvas && contenuto) {
+    const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
+
+    // classe aggiunta con il bottone
+    offcanvas.addEventListener("shown.bs.offcanvas", function () {
+      contenuto.classList.add("riduzione-pagina");
+      console.log("bottone up");
+    });
+
+    // classe tolta
+    offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+      contenuto.classList.remove("riduzione-pagina");
+      console.log("bottone down");
+    });
+  }
+});
