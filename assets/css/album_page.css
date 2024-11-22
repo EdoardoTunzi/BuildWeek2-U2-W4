@@ -18,8 +18,9 @@ h1 {
 #greenPlay {
   color: #1cd760;
 }
-#greenPlay::before {
-  transform: translateY(3px);
+
+.fs-big {
+  font-size: 48px;
 }
 .fs-7 {
   font-size: 15px;
@@ -31,6 +32,40 @@ h1 {
 #trackListHeader p {
   margin-bottom: 0;
 }
-.col-9 {
-  height: calc(100vh - 101px);
+
+#mobile-nav {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6898560725552051) 25%,
+    rgba(0, 0, 0, 0.5258182176656151) 50%,
+    rgba(0, 0, 0, 0.54600749211356465) 90%
+  );
+}
+
+/* impostare grandezza */
+#riduzione-pagina {
+  width: auto;
+}
+
+/* impostazioni della larghezza con l'apertura del coso a destra+ animazione */
+#riduzione-pagina.riduzione-pagina {
+  width: 84%;
+  transition: width 0.3s ease-in-out;
+}
+
+#offcanvasScrolling {
+  max-height: calc(100vh - 101px);
+  width: 17%;
+}
+@media screen and(max-width:576px) {
+  .col-md-9 {
+    height: auto;
+    margin-bottom: 162px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .col-md-9 {
+    height: calc(100vh - 101px);
+  }
 }
