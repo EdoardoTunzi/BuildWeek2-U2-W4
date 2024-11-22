@@ -42,29 +42,38 @@ const infoartist = function () {
     const nametitles = document.getElementById("nomeArtista");
     nametitles.innerText = dataArtist.name;
     const rank = document.getElementById("rank");
+    const rank2 = document.getElementById("rank2");
     const formattedNumber = dataArtist.nb_fan.toLocaleString("it-IT");
     rank.innerText = `${formattedNumber} ascoltatori mensili`;
+    rank2.innerText = `${formattedNumber} ascoltatori mensili`;
     const imgArtista = document.getElementById("smallImg");
-    const imgArtista2 = document.getElementById("smallImg2")
+    const imgArtista2 = document.getElementById("smallImg2");
     const artName = document.getElementById("artName");
-    const artName2 = document.getElementById("artName2")
+    const artName2 = document.getElementById("artName2");
     imgArtista.src = `${dataArtist.picture_small}`;
     artName.innerText = dataArtist.name;
     imgArtista2.src = `${dataArtist.picture_small}`;
     artName2.innerText = dataArtist.name;
   };
   const trackFetch = function (trackUrl) {
-    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${receivedId}/top?limit=5`, {
-      headers: {
-        "x-rapidapi-key": "9490b49734msh25997cbeaddc899p179f88jsn4249ac1f949a",
-        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
+    fetch(
+      `https://striveschool-api.herokuapp.com/api/deezer/artist/${receivedId}/top?limit=5`,
+      {
+        headers: {
+          "x-rapidapi-key":
+            "9490b49734msh25997cbeaddc899p179f88jsn4249ac1f949a",
+          "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
+        }
       }
-    })
+    )
       .then((response) => {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error("non siamo riusciti ad elaborare la richiesta", response.statusText);
+          throw new Error(
+            "non siamo riusciti ad elaborare la richiesta",
+            response.statusText
+          );
         }
       })
       .then((responseObj) => {
@@ -113,13 +122,17 @@ const infoartist = function () {
                       class="col-2 d-none d-sm-flex justify-content-end align-items-center"
                     >
                       <div class="text-secondary-emphasis fs-6 text-end">
-                        <p class="fs-7 mb-1">${topSong.rank.toLocaleString("it-IT")}</p>
+                        <p class="fs-7 mb-1">${topSong.rank.toLocaleString(
+                          "it-IT"
+                        )}</p>
                       </div>
                     </div>
                     <div
                       class="col-1 offset-4 d-flex align-items-center justify-content-center"
                     >
-                      <p class="fs-7 text-secondary-emphasis mb-0">${formatSecondsTomin(topSong.duration)}</p>
+                      <p class="fs-7 text-secondary-emphasis mb-0">${formatSecondsTomin(
+                        topSong.duration
+                      )}</p>
                     </div>`;
           topSongContainer.appendChild(songRow);
           if (i == 0) {
@@ -144,6 +157,10 @@ const backButton = document.getElementById("backButton");
 backButton.onclick = function () {
   window.history.back();
 };
+const btnBack = document.getElementById("btnBack");
+btnBack.onclick = function () {
+  window.history.back();
+};
 
 function modPlayerbar(i) {
   topSong = arrayTopSongs[i];
@@ -155,6 +172,13 @@ function modPlayerbar(i) {
   playerbarName.innerText = `${topSong.title}`;
   playerbarArtist.innerText = `${topSong.artist.name}`;
   playerbarDuration.innerText = `${formatSecondsTomin(topSong.duration)}`;
+  const playerbarArtistMobile = document.getElementById("pb-m-name");
+
+  const playerbarImgMobile = document.getElementById("pb-m-img");
+
+  playerbarImgMobile.src = `${topSong.album.cover_small}`;
+
+  playerbarArtistMobile.innerText = `${topSong.artist.name} - ${topSong.title}`;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -179,3 +203,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+window.onload = function () {
+  const img = localStorage.getItem("img");
+  const name = localStorage.getItem("name");
+  const artist = localStorage.getItem("artist");
+  const duration = localStorage.getItem("duration");
+  const mobImg = localStorage.getItem("imgMobile");
+  const mobName = localStorage.getItem("name");
+  const mobArtist = localStorage.getItem("artist");
+  const playerbarArtist = document.getElementById("pb-artista");
+  const playerbarName = document.getElementById("pb-nome");
+  const playerbarImg = document.getElementById("pb-img");
+  const playerbarDuration = document.getElementById("pb-duration");
+  playerbarImg.src = `${img}`;
+  playerbarName.innerText = `${name}`;
+  playerbarArtist.innerText = `${artist}`;
+  playerbarDuration.innerText = `${duration}`;
+  const playerbarArtistMobile = document.getElementById("pb-m-name");
+
+  const playerbarImgMobile = document.getElementById("pb-m-img");
+
+  playerbarImgMobile.src = `${mobImg}`;
+
+  playerbarArtistMobile.innerText = `${mobArtist} - ${mobName}`;
+};

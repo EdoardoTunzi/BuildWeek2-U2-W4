@@ -91,6 +91,15 @@ input[type="range"]::-webkit-slider-thumb {
   background: transparent;
   border: none;
 }
+#mobile-nav {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6898560725552051) 25%,
+    rgba(0, 0, 0, 0.5258182176656151) 50%,
+    rgba(0, 0, 0, 0.54600749211356465) 90%
+  );
+}
 
 #imgbg {
   width: 100%;
@@ -127,14 +136,20 @@ input[type="range"]::-webkit-slider-thumb {
   max-height: calc(100vh - 101px);
   width: 17%;
 }
+
+.positionBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 @media (max-width: 767px) {
   #playerBar img {
-      width: 50px; /* Riduce la dimensione dell'immagine */
+    width: 50px; /* Riduce la dimensione dell'immagine */
   }
 
   .playerBar .lh-1 small {
-      display: block;
-      font-size: 12px; /* Riduce la dimensione del testo per i numeri di ascoltatori */
-      margin-top: 5px;
+    display: block;
+    font-size: 12px; /* Riduce la dimensione del testo per i numeri di ascoltatori */
+    margin-top: 5px;
   }
 }

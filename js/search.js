@@ -142,3 +142,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+window.onload = function () {
+  const img = localStorage.getItem("img");
+  const name = localStorage.getItem("name");
+  const artist = localStorage.getItem("artist");
+  const duration = localStorage.getItem("duration");
+  const mobImg = localStorage.getItem("imgMobile");
+  const mobName = localStorage.getItem("name");
+  const mobArtist = localStorage.getItem("artist");
+  const playerbarArtist = document.getElementById("pb-artista");
+  const playerbarName = document.getElementById("pb-name");
+  const playerbarImg = document.getElementById("pb-img");
+  const playerbarDuration = document.getElementById("pb-duration");
+  playerbarImg.src = `${img}`;
+  playerbarName.innerText = `${name}`;
+  playerbarArtist.innerText = `${artist}`;
+  playerbarDuration.innerText = `${duration}`;
+  const playerbarArtistMobile = document.getElementById("pb-m-name");
+
+  const playerbarImgMobile = document.getElementById("pb-m-img");
+
+  playerbarImgMobile.src = `${mobImg}`;
+
+  playerbarArtistMobile.innerText = `${mobArtist} - ${mobName}`;
+};

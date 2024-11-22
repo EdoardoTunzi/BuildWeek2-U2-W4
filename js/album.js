@@ -149,8 +149,6 @@ const getAlbumInfo = function () {
     });
 };
 
-window.onload = getAlbumInfo;
-
 const backButton = document.getElementById("backButton");
 backButton.onclick = function () {
   window.history.back();
@@ -171,6 +169,20 @@ function modPlayerbar(i) {
   playerbarName.innerText = `${topSong.title}`;
   playerbarArtist.innerText = `${topSong.artist.name}`;
   playerbarDuration.innerText = `${formatSecondsTomin(topSong.duration)}`;
+  const playerbarArtistMobile = document.getElementById("pb-m-name");
+
+  const playerbarImgMobile = document.getElementById("pb-m-img");
+
+  playerbarImgMobile.src = `${topSong.album.cover_small}`;
+
+  playerbarArtistMobile.innerText = `${topSong.artist.name} - ${topSong.title}`;
+  localStorage.setItem("img", topSong.album.cover_small);
+  localStorage.setItem("name", topSong.title);
+  localStorage.setItem("artist", topSong.artist.name);
+  localStorage.setItem("duration", formatSecondsTomin(topSong.duration));
+  localStorage.setItem("imgMobile", topSong.album.cover_small);
+  localStorage.setItem("name", topSong.title);
+  localStorage.setItem("artist", topSong.artist.name);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -195,3 +207,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+window.onload = function () {
+  getAlbumInfo();
+  const img = localStorage.getItem("img");
+  const name = localStorage.getItem("name");
+  const artist = localStorage.getItem("artist");
+  const duration = localStorage.getItem("duration");
+  const mobImg = localStorage.getItem("imgMobile");
+  const mobName = localStorage.getItem("name");
+  const mobArtist = localStorage.getItem("artist");
+  const playerbarArtist = document.getElementById("pb-artista");
+  const playerbarName = document.getElementById("pb-nome");
+  const playerbarImg = document.getElementById("pb-img");
+  const playerbarDuration = document.getElementById("pb-duration");
+  playerbarImg.src = `${img}`;
+  playerbarName.innerText = `${name}`;
+  playerbarArtist.innerText = `${artist}`;
+  playerbarDuration.innerText = `${duration}`;
+  const playerbarArtistMobile = document.getElementById("pb-m-name");
+
+  const playerbarImgMobile = document.getElementById("pb-m-img");
+
+  playerbarImgMobile.src = `${mobImg}`;
+
+  playerbarArtistMobile.innerText = `${mobArtist} - ${mobName}`;
+};
