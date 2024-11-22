@@ -111,6 +111,10 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 @media screen and (max-width: 576px) {
+  .col-sm-9 {
+    height: 100vh;
+    margin-bottom: 162px !important;
+  }
   .cardMob {
     display: flex;
     justify-content: center;
@@ -119,5 +123,9 @@ input[type="range"]::-webkit-slider-thumb {
   .cardMob img,
   .cardMob .card {
     width: 100% !important;
+  }
+  #mobile-nav {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6898560725552051) 25%, rgba(0, 0, 0, 0.5258182176656151) 50%, rgba(0, 0, 0, 0.54600749211356465) 90%);
   }
 }
