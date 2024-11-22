@@ -3,13 +3,6 @@ const URL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";
 const albumSectionTitle = document.getElementById("albumSectionName");
 const artistSectionTitle = document.getElementById("artistSectionTitle");
 
-//eventlistener bottone nascondi annunci
-const hero = document.getElementById("first-section");
-const hideBtn = document.querySelector(".letter-spacing");
-hideBtn.addEventListener("click", function () {
-  hero.classList.add("d-none"); // Nasconde il div
-});
-
 //funzione per search
 const fetchData = (e) => {
   // e.preventDefault();
@@ -45,17 +38,29 @@ const fetchData = (e) => {
           const card = document.createElement("div");
           card.classList.add("bg-body-tertiary");
           card.classList.add("rounded-2");
+          card.classList.add("cardMob");
           card.innerHTML = `
         
-                  <div class="card border-0 mt-3 p-3 pt-0 pb-5 bg-body-tertiary" style="width: 14rem">
-                  <a class="text-light text-decoration-none" href="./album.html?albumId=${obj.album.id}">  
-                  <img
-                      src="${obj.album.cover_medium}"
-                      class="card-img-top"
-                    /></a>
-                    <div class="card-body p-0 pt-3 ms-2">
-                      <h5 class="card-title fs-6"><a class="text-light text-decoration-none" href="./album.html?albumId=${obj.album.id}">${obj.album.title}</a></h5>
-                      <p class="card-text text-secondary-emphasis fs-7">${obj.artist.name}</p>
+                  <div class="card  border-0 mt-3 p-3 py-0 pb-1 pb-sm-3 bg-body-tertiary" style="width: 14rem">
+                  <div class="d-flex d-md-block">
+                    <a class="text-light w-50 text-decoration-none" href="./album.html?albumId=${obj.album.id}">  
+                    <img
+                        src="${obj.album.cover_medium}"
+                        class="card-img-top img-fluid"
+                      /></a>
+                      <div class="card-body p-0 pt-3 ms-2 text-truncate w-50 ">
+                        <h5 class="card-title fs-6 text-truncate"><a class="text-light text-decoration-none" href="./album.html?albumId=${obj.album.id}">${obj.album.title}</a></h5>
+                        <p class="card-text text-secondary-emphasis fs-7">${obj.artist.name}</p>
+                      </div>
+                    </div>
+                    <div class="pt-3  pb-2 d-block d-sm-block d-md-none d-flex justify-content-between"> 
+                      <div>
+                        <i class="bi ps-2 bi-suit-heart-fill spotify-green fs-4"></i>
+                        <i class="bi bi-three-dots-vertical ms-3 fs-4"></i>
+                      </div>
+                      <div>
+                      <i class="bi bi-play-circle-fill text-secondary fs-5"></i>
+                      </div>
                     </div>
                   </div>
                 
@@ -94,6 +99,14 @@ const fetchData = (e) => {
 };
 
 window.onload = () => {
+  //eventlistener bottone nascondi annunci
+  const hero = document.getElementById("first-section");
+  const hideBtn = document.getElementById("annuncioBtn");
+  hideBtn.addEventListener("click", function () {
+    hero.classList.add("d-none");
+    hero.classList.remove("d-md-block"); // Nasconde il div
+  });
+
   fetchData();
 };
 

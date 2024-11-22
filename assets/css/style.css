@@ -2,7 +2,7 @@ body {
   font-family: "Circular";
 }
 
-.overflow-y-auto {
+.col-md-9 {
   height: calc(100vh - 101px);
 }
 
@@ -63,21 +63,22 @@ form input {
   font-size: 13px;
 }
 /* impostare grandezza */
-/* #riduzione-pagina {
+#riduzione-pagina {
   width: auto;
-} */
+}
 
 /* impostazioni della larghezza con l'apertura del coso a destra+ animazione */
-/* #riduzione-pagina.riduzione-pagina {
+#riduzione-pagina.riduzione-pagina {
   width: 84%;
   transition: width 0.3s ease-in-out;
-} */
+}
 
-/* #offcanvasScrolling {
+#offcanvasScrolling {
   max-height: calc(100vh - 101px);
   width: 17%;
-} */
+}
 #first-section {
+  position: relative;
   background: linear-gradient(
     187deg,
     #000 0%,
@@ -87,7 +88,6 @@ form input {
     #000 100%
   );
 }
-
 .btn-custom {
   border: 1px solid white;
 }
@@ -104,6 +104,9 @@ form input {
 }
 .spotify-color {
   background-color: #1cd760;
+}
+.spotify-green {
+  color: #1cd760;
 }
 
 /*----------------------- player bar----------------------------*/
@@ -137,47 +140,28 @@ input[type="range"]::-webkit-slider-thumb {
   background: transparent;
   border: none;
 }
-@media screen and (max-width: 576px) {
-  .col-xs-3 {
-    width: 100% !important;
-  }
+
+/*----------------------- player bar mobile version----------------------------*/
+#mobile-nav {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6898560725552051) 25%,
+    rgba(0, 0, 0, 0.5258182176656151) 50%,
+    rgba(0, 0, 0, 0.54600749211356465) 90%
+  );
 }
+
+/*----------------------- media query----------------------------*/
 @media screen and (max-width: 768px) {
-  .col-xs-3 {
-    width: 48%;
-  }
-  #album p {
-    font-size: 20px !important;
-    font-weight: 600 !important;
+  .cardMob,
+  .cardMob .card {
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
   }
 
-  #cards-container .bg-body-tertiary.rounded-2 {
-    width: 100% !important;
-  }
-  .card {
-    width: 100% !important;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 1rem !important;
-  }
-  .card-img-top {
-    border-radius: 0;
-    box-shadow: 0 0 10px rgb(148, 147, 147);
-  }
-  .card-title,
-  .card-text {
-    padding-left: 20px;
-  }
-  .card-description {
-    color: gray;
-  }
-  .card-title {
-    font-size: initial;
-    font-size: 40px !important;
-  }
-}
-@media screen and (min-width: 768px) {
-  .card {
-    width: 14rem;
+  .cardMob a {
+    width: 50% !important;
   }
 }
