@@ -110,6 +110,23 @@ input[type="range"]::-webkit-slider-thumb {
   border: none;
 }
 
+/*offcanvas*/
+/* impostare grandezza */
+#riduzione-pagina {
+  width: auto;
+}
+
+/* impostazioni della larghezza con l'apertura del coso a destra+ animazione */
+#riduzione-pagina.riduzione-pagina {
+  width: 84%;
+  transition: width 0.3s ease-in-out;
+}
+
+#offcanvasScrolling {
+  max-height: calc(100vh - 101px);
+  width: 17%;
+}
+
 @media screen and (max-width: 576px) {
   .col-sm-9 {
     height: 100vh;
