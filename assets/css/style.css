@@ -2,7 +2,7 @@ body {
   font-family: "Circular";
 }
 
-.col-md-9 {
+.overflow-y-auto {
   height: calc(100vh - 101px);
 }
 
@@ -62,7 +62,21 @@ form input {
   border: none;
   font-size: 13px;
 }
+/* impostare grandezza */
+/* #riduzione-pagina {
+  width: auto;
+} */
 
+/* impostazioni della larghezza con l'apertura del coso a destra+ animazione */
+/* #riduzione-pagina.riduzione-pagina {
+  width: 84%;
+  transition: width 0.3s ease-in-out;
+} */
+
+/* #offcanvasScrolling {
+  max-height: calc(100vh - 101px);
+  width: 17%;
+} */
 #first-section {
   background: linear-gradient(
     187deg,
@@ -122,4 +136,48 @@ input[type="range"]::-webkit-slider-thumb {
   width: 0;
   background: transparent;
   border: none;
+}
+@media screen and (max-width: 576px) {
+  .col-xs-3 {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .col-xs-3 {
+    width: 48%;
+  }
+  #album p {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+  }
+
+  #cards-container .bg-body-tertiary.rounded-2 {
+    width: 100% !important;
+  }
+  .card {
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem !important;
+  }
+  .card-img-top {
+    border-radius: 0;
+    box-shadow: 0 0 10px rgb(148, 147, 147);
+  }
+  .card-title,
+  .card-text {
+    padding-left: 20px;
+  }
+  .card-description {
+    color: gray;
+  }
+  .card-title {
+    font-size: initial;
+    font-size: 40px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: 14rem;
+  }
 }

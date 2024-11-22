@@ -19,7 +19,7 @@
   </head>
   <body>
     <main>
-      <div class="container-fluid">
+      <div class="container-fluid" id="riduzione-pagina">
         <div class="row">
           <!--SIDEBAR-->
           <div id="sideBar" class="col-3 d-none d-md-block">
@@ -348,11 +348,16 @@
                     Podcast e show
                   </button>
                 </div>
-                <div id="artistCardsContainer" class="row">
-                  <div class="col-6 col-md-4 mb-3 text-truncate">
+                <div
+                  id="artistCardsContainer"
+                  class="row d-flex m-0 column-gap-3 justify-content-between"
+                >
+                  <div
+                    class="col-xs-3 col-sm-6 col-md-3 mb-3 p-0 bg-body-tertiary rounded-2"
+                  >
                     <div
                       id="album"
-                      class="d-flex col-sm-12 col-md-9 bg-body-tertiary rounded-2 align-items-center"
+                      class="d-flex col-sm-12 col-md-9 align-items-center"
                     >
                       <div>
                         <img
@@ -360,16 +365,18 @@
                           width="70"
                         />
                       </div>
-                      <p class="m-0 p-2">
+                      <p class="m-0 p-2 w-100 text-truncate">
                         early stage emily syndrome <br />
                         (sett-ott 2022)
                       </p>
                     </div>
                   </div>
-                  <div class="col-md-4 col-6 text-truncate mb-3">
+                  <div
+                    class="col-xs-3 col-sm-6 col-md-3 p-0 bg-body-tertiary rounded-2 mb-3"
+                  >
                     <div
                       id="album"
-                      class="d-flex col-sm-12 col-md-9 bg-body-tertiary rounded-2 align-items-center"
+                      class="d-flex col-sm-12 col-md-9 align-items-center"
                     >
                       <div>
                         <img
@@ -377,13 +384,15 @@
                           width="70"
                         />
                       </div>
-                      <p class="m-0 p-2">Be The Young</p>
+                      <p class="m-0 p-2 w-100 text-truncate">Be The Young</p>
                     </div>
                   </div>
-                  <div class="col-md-4 col-6 text-truncate mb-3">
+                  <div
+                    class="col-xs-3 col-sm-6 col-md-3 p-0 bg-body-tertiary rounded-2 mb-3"
+                  >
                     <div
                       id="album"
-                      class="d-flex col-sm-12 col-md-9 bg-body-tertiary rounded-2 align-items-center"
+                      class="d-flex col-sm-12 col-md-9 align-items-center"
                     >
                       <div>
                         <img
@@ -391,13 +400,17 @@
                           width="70"
                         />
                       </div>
-                      <p class="m-0 p-2">saggio vibes 💃🩰</p>
+                      <p class="m-0 p-2 w-100 text-truncate">
+                        saggio vibes 💃🩰
+                      </p>
                     </div>
                   </div>
-                  <div class="col-md-4 col-6 text-truncate mb-3">
+                  <div
+                    class="col-xs-3 col-sm-6 col-md-3 p-0 bg-body-tertiary rounded-2 mb-3"
+                  >
                     <div
                       id="album"
-                      class="d-flex col-sm-12 col-md-9 bg-body-tertiary rounded-2 align-items-center"
+                      class="d-flex col-sm-12 col-md-9 align-items-center"
                     >
                       <div>
                         <img
@@ -406,13 +419,17 @@
                           width="70"
                         />
                       </div>
-                      <p class="m-0 p-2">Brani che ti piacciono</p>
+                      <p class="m-0 p-2 w-100 text-truncate">
+                        Brani che ti piacciono
+                      </p>
                     </div>
                   </div>
-                  <div class="col-md-4 col-6 text-truncate mb-3">
+                  <div
+                    class="col-xs-3 col-sm-6 col-md-3 p-0 bg-body-tertiary rounded-2 mb-3"
+                  >
                     <div
                       id="album"
-                      class="d-flex col-sm-12 col-md-9 bg-body-tertiary rounded-2 align-items-center"
+                      class="d-flex col-sm-12 col-md-9 align-items-center"
                     >
                       <div>
                         <img
@@ -420,21 +437,26 @@
                           width="70"
                         />
                       </div>
-                      <p class="m-0 p-2">2021 lol</p>
+                      <p class="m-0 p-2 w-100 text-truncate">2021 lol</p>
                     </div>
                   </div>
-                  <div class="col-md-4 col-6 text-truncate">
+                  <div
+                    class="col-xs-3 col-sm-6 col-md-3 p-0 m-0 bg-body-tertiary rounded-2"
+                    style="height: 70px"
+                  >
                     <div
                       id="album"
-                      class="d-flex col-sm-12 col-md-9 bg-body-tertiary rounded-2 align-items-center"
+                      class="d-flex col-sm-12 col-md-9 p-0 m-0 align-items-center"
                     >
                       <div>
                         <img
                           src="./assets/imgs/home/buonasera5.png"
-                          width="70"
+                          style="height: 70px"
                         />
                       </div>
-                      <p class="m-0 p-2">Deep Dive with Ali Abdal</p>
+                      <p class="m-0 p-2 w-100 text-truncate">
+                        Deep Dive with Ali Abdal
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -453,7 +475,10 @@
                   >
                 </div>
               </div>
-              <div id="cards-container" class="row d-flex gap-5 flex-wrap">
+              <div
+                id="cards-container"
+                class="d-flex flex-wrap row-gap-5 justify-content-between"
+              >
                 <div class="card border-0 mt-3 p-3 pb-5 bg-body-tertiary">
                   <img
                     src="./assets/imgs/home/buonasera6.png"
@@ -483,7 +508,7 @@
                     </p>
                     <h5 class="card-title fs-6">big on the internet</h5>
                     <p
-                      class="card-text d-none d-md-block text-secondary-emphasis fs-7"
+                      class="card-text m-sm-5 d-none d-md-block text-secondary-emphasis fs-7"
                     >
                       iykyk
                     </p>

@@ -31,7 +31,9 @@ const fetchData = (e) => {
       const cardsContainer = document.getElementById("cards-container");
       cardsContainer.innerHTML = "";
       //albumSectionTitle.innerText = "Albums";
-      const artistCardContainer = document.getElementById("artistCardsContainer");
+      const artistCardContainer = document.getElementById(
+        "artistCardsContainer"
+      );
       //artistCardContainer.innerHTML = "";
       //artistSectionTitle.innerText = "Artists";
       const artistArray = [];
@@ -94,3 +96,26 @@ const fetchData = (e) => {
 window.onload = () => {
   fetchData();
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  const offcanvas = document.getElementById("offcanvasScrolling");
+  const contenuto = document.getElementById("riduzione-pagina");
+  console.log(contenuto);
+
+  // Verifica che gli elementi esistano
+  if (offcanvas && contenuto) {
+    const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
+
+    // classe aggiunta con il bottone
+    offcanvas.addEventListener("shown.bs.offcanvas", function () {
+      contenuto.classList.add("riduzione-pagina");
+      console.log("bottone up");
+    });
+
+    // classe tolta
+    offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+      contenuto.classList.remove("riduzione-pagina");
+      console.log("bottone down");
+    });
+  }
+});
