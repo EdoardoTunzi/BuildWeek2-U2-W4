@@ -28,6 +28,7 @@ const fetchData = (e) => {
       const mainContent = document.getElementById("mainContent");
       mainContent.innerHTML = "";
       const artistTitle = document.createElement("h1");
+      artistTitle.classList.add("mt-3");
       artistTitle.innerText = "Artisti";
       const albumTitle = document.createElement("h1");
       albumTitle.innerText = "Album";
@@ -46,6 +47,7 @@ const fetchData = (e) => {
           const card = document.createElement("div");
           card.classList.add("bg-body-tertiary");
           card.classList.add("rounded-2");
+          card.classList.add("cardMob");
           card.innerHTML = `
         
                   <div class="card border-0 mt-3 p-3 pt-0 pb-5 bg-body-tertiary" style="width: 14rem">
@@ -70,7 +72,8 @@ const fetchData = (e) => {
 
         if (!artistArray.includes(obj.artist.id)) {
           const artistCard = document.createElement("div");
-          artistCard.classList.add("col-4");
+          artistCard.classList.add("col-6");
+          artistCard.classList.add("col-sm-4");
           artistCard.classList.add("mb-3");
           artistCard.innerHTML = `
           <a class="text-light text-decoration-none" href="./artist.html?artistId=${obj.artist.id}">

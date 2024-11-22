@@ -68,7 +68,7 @@ form input {
   overflow: hidden;
   position: relative;
   min-height: 170px;
-  min-width: 200px;
+  min-width: 170px;
 }
 .search-image {
   border-radius: 4px;
@@ -108,4 +108,16 @@ input[type="range"]::-webkit-slider-thumb {
   width: 0;
   background: transparent;
   border: none;
+}
+
+@media screen and (max-width: 576px) {
+  .cardMob {
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+  }
+  .cardMob img,
+  .cardMob .card {
+    width: 100% !important;
+  }
 }
